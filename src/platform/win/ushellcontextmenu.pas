@@ -725,6 +725,10 @@ begin
             nShow := SW_NORMAL;
             if FBackground then begin
               lpDirectory := PAnsiChar(CeUtf8ToSys(FFiles[0].FullPath));
+            end
+            else
+            begin
+              lpDirectory := PAnsiChar(CeUtf8ToSys(ExtractFilePath(FFiles[0].FullPath)));
             end;
           end;
 
